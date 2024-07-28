@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>Form</title>
+        <link rel ="stylesheet" href="/register.css">
+        
+    </head>
+    <body>
+        <div class="container">
+          <div class="title">Registration</div>
+          <form action="/adminreg" method="post">
+
+
+            <div class="user__details">
+
+              <div class="input__box">
+                <span class="details">Staff Number</span>
+                <input type="text"  name="staffno" placeholder="E.g: 21BCS136" required>
+              </div>
+              
+              <div class="input__box">
+                <span class="details">Full Name</span>
+                <input type="text"  name="fullname" placeholder="E.g: YaduKrishna PB" required>
+              </div>
+            
+              <div class="input__box">
+                <span class="details">D.O.B</span>
+                <input type="date"  name="dat" placeholder="26-02-2002" value="2023-04-16" required>
+              </div>
+            <div class="input__box">
+                <span class="details">Gender</span>
+                <input type="text"  name="gender" placeholder="input M for male and F for female" value="" required>
+              </div>
+            
+              
+
+            <div class="user__details">
+                <div class="input__box">
+                  <span class="details">Branch Number</span>
+                  <input type="text" name="branchnumber" placeholder="choose one of B2 B3 B5 B7" required>
+                </div>
+                <div class="input__box">
+                  <span class="details">Salary</span>
+                  <input type="number" name="salary" required>
+                </div>
+              
+            <div class="input__box">
+              <span class="details">Telephone Number</span>
+              <input type="tel" name="telepno" placeholder="" >
+            </div>
+            <div class="input__box">
+              
+            </div>
+            <div class="input__box">
+              <span class="details">Position</span>
+              <input type="text"  name="position" placeholder="Manager/Supervisor/Assistant" required>
+            </div>
+            
+
+              <div class="input__box">
+                <span class="details">Supervisor Name</span>
+                <input type="text"  name="Supervisorname" placeholder="" >
+              </div>
+
+              <div class="input__box">
+                <span class="details">Manager Start date</span>
+                <input  type="text"
+                onfocus="(this.type='date')" placeholder="only for manager" name="managerstart" >
+              </div>
+
+
+              <div class="input__box">
+                <span class="details">Manager Bonus</span>
+                <input type="number" name="bonus" placeholder="only for manager" >
+              </div>
+      
+          </div>
+          
+          <div class="button">
+            <input type="submit" value="Register">
+          </div>
+        </form>
+      </div>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<%- include('./partials/adminheader') -%>
+<link rel="stylesheet" href="/t.css">
+<body>
+  <div class="container mt-5 animate__animated animate__fadeIn">
+    <table class="table table-striped table-bordered animate__animated animate__slideInUp">
+      <thead>
+        <tr>
+          <th scope="col">Query Number</th>
+          <th scope="col">Query Info</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for(let i=0; i<obj.length; i++){ %>
+        <tr>
+          <th scope="row"><%= obj[i].id %></th>
+          <td><%= obj[i].query %></td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
+  <div class="container mt-5 animate__animated animate__fadeIn">
+    <form action="/normal" method="post">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label animate__animated animate__fadeIn">Query ID</label>
+        <input type="number" class="form-control animate__animated animate__slideInLeft" id="exampleInputEmail1"
+          name="queryid" aria-describedby="emailHelp">
+      </div>
+      <div class="ml-5 animate__animated animate__fadeIn">
+        <button type="submit" class="btn btn-primary m-auto animate__animated animate__zoomIn">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

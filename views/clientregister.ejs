@@ -1,0 +1,60 @@
+<%- include('./partials/header') -%>
+<link rel="stylesheet" href="/style.css">
+ <div class="container bg-body-secondary">
+      <div class="title">Client Registration</div>
+      <form action="/clientreg" method="post">
+        <div class="user__details">
+          <div class="input__box">
+            <span class="details">Client Number</span>
+            <input type="text"  name="clientnumber" placeholder="Enter if Known" />
+          </div>
+
+          <div class="input__box">
+            <span class="details">First Name</span>
+            <input type="text"  name="firstname" placeholder="Enter your Name" required />
+          </div>
+          <div class="input__box">
+            <span class="details">Last Name</span>
+            <input type="text"  name="lastname" placeholder="Enter your Name" required />
+          </div>
+
+          <div class="user__details">
+            <div class="input__box">
+              <span class="details">telephone  no</span>
+              <input type="text"  name="telephoneno" placeholder=" enter one of B2,B4,B5,B3,B7" required />
+            </div>
+            <div class="input__box">
+              <span class="details">Email</span>
+              <input type="email" name="email" placeholder="Email" required />
+            </div>
+
+            <div class="input__box">
+              <span class="details">Property Type</span>
+              <input type="text"  name="propertytype" placeholder="Property type eg flat" required />
+            </div>
+
+            <div class="input__box">
+              <span class="details">Max Rent</span>
+              <input type="text" name="maxrent" placeholder="" required />
+            </div>
+          </div>
+          <div class="input__box">
+            <span class="details">Registered By</span>
+            <input type="text" placeholder="staff no" name="regby" required />
+          </div>
+
+          <div class="input__box">
+            <span class="details">Registration Date</span>
+            <input type="date"  name="registerdate" placeholder="2023-04-16" required />
+          </div>
+        </div>
+
+        <div class="button">
+          <input type="submit" value="Register" />
+        </div>
+      </form>
+    </div> 
+   
+</div>  
+  </body>  
+</html>

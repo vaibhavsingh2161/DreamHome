@@ -1,0 +1,33 @@
+<%- include('./partials/header') -%>
+<link  rel="stylesheet" href="/t.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <body class="bg-dark-subtle">
+    
+    <div class="container table-responsive py-5 container mt-5 animate__animated animate__fadeIn"> 
+      <table class="table table-light table-bordered table-hover table-bordered animate__animated animate__slideInUp">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Id</th>
+            <% for(let i=0;i<head.length;i++){ %>
+            <th scope="col"><%= head[i] %></th>
+            <% } %>
+            <th scope="col">Add comment</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(let i=0;i<rest.length;i++){ %>
+          <tr>
+            <th scope="row"><%= i+1 %></th>
+            <% for(let j=0;j<rest[0].length;j++){ %>
+            <td><%= rest[i][j] %></td>
+            <% } %>
+            <td><a href="/addcomment?id=<%= rest[i][0] %>"><i class="fa-regular fa-comment fa-lg items-center" style="color: #873b22;"></i></a></td>
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  </body>
+</html>

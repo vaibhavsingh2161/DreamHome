@@ -1,0 +1,50 @@
+<%- include('./partials/adminheader') -%>
+
+<style>
+      
+      
+    #submitBtn {
+      background-color: #2F4F4F;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body class="bg-dark">
+  <div class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <h1 class="text-center text-light mb-5">Any query you wanted to run on Dream House Database</h1>
+        <form action="/any" method="post">
+          <div class="form-group">
+            <label for="queryInput" class="text-light">Enter your query here:</label>
+            <input type="text" class="form-control form-control-lg shadow-lg"  name="query" id="queryInput">
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-lg mt-3" id="submitBtn">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-/1XN7m5uEfz9USt0NUfsKPv3FR5RD9QGi5yRyu9/zoGaua//K6w6Ejhk0Bw1Ua1J" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-lfYgY2QoQHtTaa4aE42jz4NoesFUKHs+TeqpSfJClcT9j2QvMAbT+JS2CxhK07yR" crossorigin="anonymous"></script>
+</body>
+</html>
+

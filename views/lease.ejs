@@ -1,0 +1,50 @@
+<%- include('./partials/header') -%>
+<link rel="stylesheet" href="/style.css" />
+<body>
+    <div class="container bg-body-secondary">
+        <div class="title">Lease Form</div>
+        <form action="/lease" method="post">
+            <div class="user__details">
+                <div class="input__box">
+                    <span class="details">Client Number</span>
+                    <input type="text" name="clientnumber" placeholder="Enter client number" required />
+                </div>
+
+                <div class="input__box">
+                    <span class="details">Property Number</span>
+                    <input type="text" name="propertynumber" placeholder="Enter property number" required />
+                </div>
+
+               
+                <div class="input__box">
+                    <span class="details">Payment Method</span>
+                    <input type="text" name="paymentmethod" placeholder="Enter Payment Method" required />
+                </div>
+
+                <div class="input__box">
+                    <span class="details">Deposit Paid</span>
+                    <select name="depositpaid" required>
+                        <option value="">Select an option</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+
+                <div class="input__box">
+                    <span class="details">Rent Start Date</span>
+                    <input type="date" name="startdate" placeholder="2023-04-16" required />
+                </div>
+
+                <div class="input__box">
+                    <span class="details">Rent Finish Date</span>
+                    <input type="date" name="enddate" placeholder="2023-04-16" required />
+                </div>
+            </div>
+
+            <div class="button">
+                <input type="submit" value="Submit" />
+            </div>
+        </form>
+    </div>
+</body>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>DreamHouse</title>
+    <link rel="icon" type="image/webp" href="/tit-773f3d8a.svg" />
+    <link rel="stylesheet"  type="text/css" href="/x.css">
+  </head>
+  <body class="bg-red-200">
+    <% if (typeof error !== 'undefined') { %>
+      <script>
+        alert("<%= error %>");
+      </script>
+    <% } %>
+    <div class="container mt-48 flex mx-auto items-center justify-center">
+      <div class="w-1/2 left">
+        <div class="logo ml-52">
+          <img class="h-[300px]" src="/home-94cbe009.png" alt="" />
+          <h2 class="mt-10 font-extrabold font-serif text-2xl text-amber-950">
+            Where Your Dream's Come True!!
+          </h2>
+        </div>
+      </div>
+      <div class="right bg-white m-auto w-1/4 text-xl rounded-lg p-8">
+        <form class="flex flex-col" action="/register" method="post">
+          <input
+            class="border-2 border-gray-200 rounded-lg text-center w-[100%] outline-blue-300 my-2 h-12"
+            type="text"
+            placeholder="User-Name"
+            name="username"
+            required
+          />
+          <input
+            class="border-2 border-gray-200 rounded-lg text-center w-[100%] outline-blue-300 my-2 h-12"
+            type="email"
+            placeholder="Email"
+            name="email"
+            required
+          />
+          
+        <input
+        class="border-2 border-gray-200 rounded-lg text-center w-[100%] outline-blue-300 my-2 h-12"
+        type="password"
+        placeholder="Password"
+        name="password"
+        required
+      />
+      <button
+            class="py-3 my-2 bg-blue-500 rounded-md text-white font-bold hover:bg-blue-700"
+            type="submit"
+          >Register</button>
+          
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

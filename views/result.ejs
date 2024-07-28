@@ -1,0 +1,29 @@
+<%- include('./partials/adminheader') -%>
+<link  rel="stylesheet" href="/t.css">
+<body class="bg-subtle">
+  <div class="container table-responsive py-5 container mt-5 animate__animated animate__fadeIn"> 
+    <table class="table table-light table-bordered table-hover table-bordered animate__animated animate__slideInUp">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Id</th>
+          <% for(let i=0;i<head.length;i++){ %>
+          <th scope="col"><%= head[i] %></th>
+          <% } %>
+        </tr>
+      </thead>
+      <tbody>
+        <% for(let i=0;i<rest.length;i++){ %>
+        <tr>
+          <th scope="row"><%= i+1 %></th>
+          <% for(let j=0;j<rest[0].length;j++){ %>
+          <td><%= rest[i][j] %></td>
+          <% } %>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+    </div>
+    
+    
+</body>
+</html>
